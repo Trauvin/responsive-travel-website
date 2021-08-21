@@ -31,10 +31,32 @@ function removeMenuMobile() {
 
 removeMenuMobile()
 
-/*==================== CHANGE BACKGROUND HEADER ================*/ 
-function scrollHeader(){
-  const header = document.getElementById('header')
-  // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
-  if(this.scrollY >= 200) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+function changeBackgroundHeader() {
+  function scrollHeader(){
+    const header = document.getElementById('header')
+    // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
+    if(this.scrollY >= 200) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+  }
+  window.addEventListener('scroll', scrollHeader)
 }
-window.addEventListener('scroll', scrollHeader)
+
+changeBackgroundHeader()
+
+function initializeSwiper() {
+  var swiper = new Swiper(".discover__container", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 32,
+    coverflowEffect: {
+      rotate: 0,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+}
+
+initializeSwiper()
