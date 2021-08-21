@@ -78,6 +78,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 9000px; /* remover depois */
 }
 
 body {
@@ -229,6 +230,17 @@ input {
   right: 0;
 }
 
+/* Change background header */
+.scroll-header {
+  background-color: var(--body-color);
+  box-shadow: 0 0 4px hsla(var(--hue-color), 64%, 15%, 0.15);
+}
+
+.scroll-header .nav__logo,
+.scroll-header,
+.nav__toggle {
+  color: var(--title-color);
+}
 /* =============== HOME ============ */
 .home__img {
   position: absolute;
@@ -314,3 +326,29 @@ input {
 }
 
 /* =======  BUTTONS =============== */
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: var(--font-semi-bold);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button--flex {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+.button--link {
+  background: none;
+  padding: 0;
+}
+
+.button--link:hover {
+  background: none;
+}
