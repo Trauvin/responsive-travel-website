@@ -18,7 +18,6 @@ function showMenu() {
 
 showMenu()
 
-// REMOVE MENU MOBILE
 function removeMenuMobile() {
   const navLink = document.querySelectorAll('.nav__link')
 
