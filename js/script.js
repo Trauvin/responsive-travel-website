@@ -70,7 +70,7 @@ const videoIcon = document.getElementById('video-icon')
 function playPause() {
   if(videoFile.paused) {
     videoFile.play()
-
+    
     videoIcon.classList.add("ri-pause-line")
     videoIcon.classList.remove("ri-play-line")
   } else {
